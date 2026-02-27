@@ -1,4 +1,4 @@
-# 🌐 Developer Portfolio Evolution (Beginner → Advanced → React)
+# 🌐 My Portfolio Evolution (Beginner → Advanced → React-based)
 
 > A complete journey of frontend development — from static web design to a fully structured modern React application.
 
