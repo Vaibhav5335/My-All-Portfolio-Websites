@@ -1,0 +1,5 @@
+1. Open This Folder " PortfolioReactBased " In VScode.
+2. Now Open the terminal and run these commands in sequence :
+    (i) cd my-portfolio
+   (ii) npm install
+   (ii) npm run dev
