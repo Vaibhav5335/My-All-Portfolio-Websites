@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaibhav Sharma — AI & Data Science Student</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="text/javascript" src="script.js"></script>
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="d-flex justify-content-between align-items-center p-3">
+    <div style="font-size: 1.6em;">
+      <strong id="cl">V</strong>aibhav <strong id="cl">S</strong>harma
+    </div>
+    <div>
+      <a href="#home"><strong id="cl">#</strong>Home</a>
+      <a href="#details"><strong id="cl">#</strong>My Details</a>
+      <a href="#skills"><strong id="cl">#</strong>Skills</a>
+      <a href="#works"><strong id="cl">#</strong>MyWork</a>
+      <a href="#contacts"><strong id="cl">#</strong>Contacts</a>
+    </div>
+  </nav>
+
+  <br>
+  <!-- Home Section -->
+  <section id="home" class="text-center p-4">
+
+  <!-- Clock Section -->
+  <div class="containertime" style="transform: scale(0.8);">
+    <div id="time">
+      <div class="circle" style="--color: #ff2972">
+        <div class="dots h_dot"></div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70" id="hh"></circle>
+        </svg>
+        <div id="hours">00</div>
+      </div>
+      <div class="circle" style="--color: #fee800">
+        <div class="dots m_dot"></div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70" id="mm"></circle>
+        </svg>
+        <div id="minutes">00</div>
+      </div>
+      <div class="circle" style="--color: #04fc43">
+        <div class="dots s_dot"></div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70" id="ss"></circle>
+        </svg>
+        <div id="seconds">00</div>
+      </div>
+      <br>
+      <div class="ap">
+        <div id="ampm">AM</div>
+      </div>
+    </div>
+  </div>
+
+    <h1><span class="typewriter"></span></h1>
+    <p>Web Designer & Front-End Developer</p>
+    <p><em>" With great power comes great electricity bill. "</em></p>
+    <hr />
+  </section>
+
+  <!-- Details Section -->
+  <section id="details" class="p-4">
+    <h1><strong>My Details :</strong></h1>
+    <br>
+    <div class="col-md-6">
+      <ul class="list-unstyled">
+        <li>
+          <h3><strong>Education :</strong></h3>
+          <ul>
+            <li>Completed schooling at <em>St. Paul Sr. Sec. Co-Ed School, Bhopal</em>.</li>
+            <li>Currently pursuing <em>B.Tech in Computer Science & Engineering</em> with a specialization in <em>AI & Data Science</em> at <em>Sagar Institute of Science and Technology, Gandhi Nagar</em>.</li>
+          </ul>
+        </li>
+        <li>
+          <br>
+          <h3><strong>Address :</strong></h3>
+          H.No. 26, Bhel Nagar, Ayodhya Bypass Road, Bhopal.
+        </li>
+        <li>
+          <br>
+          <h3><strong>Focus Areas :</strong></h3>
+          <ul>
+            <li>Artificial Intelligence</li>
+            <li>Machine Learning</li>
+            <li>Big Data</li>
+            <li>Predictive Analytics</li>
+            <li>Data Analytics</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <br>
+    <hr />
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="p-4">
+    <h1>My Skills :</h1>
+    <br>
+    <canvas id="skillsChart" width="380" height="190"></canvas>
+    <br><br>
+    <style>
+      #skillsChart {
+        background: linear-gradient(135deg, #1e1e2f, #2a2a3d);
+        border-radius: 15px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .chartjs-render-monitor {
+        border-radius: 10px !important;
+      }
+      @media (max-width: 768px) {
+        #skillsChart {
+          width: 100% !important;
+          height: auto !important;
+        }
+      }
+    </style>
+    <script>
+      const ctx = document.getElementById('skillsChart').getContext('2d');
+      const skillsChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Web-Dev.', 'Front-end Dev.', 'Back-end Dev.', 'Cross-Platform Dev.', 'Blockchain Dev.', 'AI & ML Skills', 'Testing-Debugging', 'Cloud Computing', 'Databases'],
+          datasets: [{
+            label: 'Skill Level',
+            data: [87, 60, 40, 26, 15, 50, 90, 40, 75],
+            backgroundColor: ['#ff5733', '#33ff57', '#3357ff', '#ff33a1', '#a133ff', '#33fff5', '#f5ff33', '#ff8c33', '#33ff8c'],
+            borderColor: ['#ff5733', '#33ff57', '#3357ff', '#ff33a1', '#a133ff', '#33fff5', '#f5ff33', '#ff8c33', '#33ff8c'],
+            borderWidth: 1,
+            borderRadius: 10 // Adds rounded corners to the bars
+          }]
+        },
+        options: {
+          responsive: true,
+          animation: {
+            duration: 2000, // Slows down the animation
+            easing: 'easeInOutBounce'
+          },
+          scales: {
+            x: {
+              grid: {
+                borderColor: '#fff'
+              },
+              ticks: {
+                color: '#fff'
+              }
+            },
+            y: {
+              beginAtZero: true,
+              grid: {
+                borderColor: '#fff'
+              },
+              ticks: {
+                color: '#fff'
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              labels: {
+                color: '#fff'
+              }
+            }
+          }
+        }
+      });
+
+      // Add animation to highlight bars on hover
+      document.getElementById('skillsChart').addEventListener('mousemove', (event) => {
+        const points = skillsChart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
+        if (points.length) {
+          const firstPoint = points[0];
+          const label = skillsChart.data.labels[firstPoint.index];
+          const value = skillsChart.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
+          document.getElementById('skillsChart').title = `${label}: ${value}%`;
+        }
+      });
+    </script>
+    <hr />
+  </section>
+  <br>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="p-4">
+    <h2 class="text-center mb-4">My Journey</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>2021</h4>
+        <p>Completed my Higher Education from ST. Paul Sr. Sec. Co-Ed School Anand Nagar Bhopal</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2023</h4>
+        <p>Built Heart Disease Predictor using ML algorithms.</p>
+      </div>
+      <div class="timeline-item">
+        <h4>2024 - Present</h4>
+        <p>B.Tech in CSE (AI & DS) - SISTec Gandhi Nagar</p>
+      </div>
+    </div>
+    <br>
+  </section>
+
+  <style>
+    #timeline {
+      background: linear-gradient(135deg, #1e1e2f, #2a2a3d);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: #fff;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 40px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .timeline-item:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .timeline-item h4 {
+      margin: 0 0 5px;
+      font-size: 1.2em;
+      color: #c586c0;
+    }
+
+    .timeline-item p {
+      margin: 0;
+      font-size: 1em;
+      color: #ddd;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 4px;
+      height: 100%;
+      background: #c586c0;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: -10px;
+      width: 20px;
+      height: 20px;
+      background: #c586c0;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(255, 87, 51, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .timeline {
+        padding-left: 20px;
+      }
+
+      .timeline-item {
+        padding: 10px;
+      }
+
+      .timeline-item h4 {
+        font-size: 1em;
+      }
+
+      .timeline-item p {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const timelineItems = document.querySelectorAll('.timeline-item');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.5 });
+
+      timelineItems.forEach((item) => {
+        item.style.opacity = 0;
+        item.style.transform = 'translateY(50px)';
+        observer.observe(item);
+      });
+    });
+  </script>
+
+  <section>
+    <hr />
+  </section>
+
+  <!-- Works Section -->
+  <section id="works" class="p-4">
+    <h2 class="text-center mb-4">My Projects</h2>
+    <div class="project-card mb-3">
+      <h3>ChertNodes</h3>
+      <p>Free and premium Minecraft server hosting service.</p>
+      <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#chertNodesModal">Details</button>
+    </div>
+    <div class="project-card">
+      <h3>ProtectX</h3>
+      <p>A powerful moderation bot for Discord servers.</p>
+      <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#protectXModal">Details</button>
+    </div>
+
+    <!-- ChertNodes Modal -->
+    <div class="modal fade" id="chertNodesModal" tabindex="-1" aria-labelledby="chertNodesModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="chertNodesModalLabel">ChertNodes Project</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>ChertNodes provides high-quality Minecraft server hosting with both free and premium options. It features instant setup, DDoS protection, and powerful performance for your Minecraft server.</p>
+            <a href="https://github.com/yourgithub/chertnodes" class="btn btn-outline-dark">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ProtectX Modal -->
+    <div class="modal fade" id="protectXModal" tabindex="-1" aria-labelledby="protectXModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="protectXModalLabel">ProtectX Project</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>ProtectX is a powerful bot designed to help Discord server admins moderate their communities efficiently. Features include automatic banning, filtering offensive content, and role management.</p>
+            <a href="https://github.com/yourgithub/protectx" class="btn btn-outline-dark">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </section>
+
+  <style>
+    #works {
+      background: linear-gradient(135deg, #1e1e2f, #2a2a3d);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: #fff;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .project-card h3 {
+      color: #c586c0;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: #ddd;
+      margin-bottom: 15px;
+    }
+
+    .btn-outline-light {
+      border-color: #c586c0;
+      color: #c586c0;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-outline-light:hover {
+      background: #c586c0;
+      color: #fff;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .project-card {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    @media (max-width: 768px) {
+      #works {
+        padding: 15px;
+      }
+
+      .project-card {
+        padding: 10px;
+      }
+
+      .project-card h3 {
+        font-size: 1.2em;
+      }
+
+      .project-card p {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+
+  <section>
+    <hr />
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contacts" class="section p-4" style="width: 100%; margin-left: 51px;">
+    <div class="container">
+      <h2 class="text-center mb-5" style="color: #c586c0;">Contact Me</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form id="contactForm"></form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Name" required style="border: 2px solid #c586c0; border-radius: 10px; padding: 10px;" />
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email" required style="border: 2px solid #c586c0; border-radius: 10px; padding: 10px;" />
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="Message" required style="border: 2px solid #c586c0; border-radius: 10px; padding: 10px;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100" style="background: #c586c0; border: none; border-radius: 10px; padding: 10px; transition: transform 0.3s ease;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </section>
+
+  <style>
+    #contacts {
+      background: linear-gradient(135deg, #1e1e2f, #2a2a3d);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      
+    }
+
+    #contacts h2 {
+      animation: fadeInDown 1s ease;
+    }
+
+    #contactForm input, #contactForm textarea {
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    #contactForm input:focus, #contactForm textarea:focus {
+      box-shadow: 0 0 10px rgba(197, 134, 192, 0.5);
+      transform: scale(1.02);
+    }
+
+    #contactForm button:hover {
+      transform: scale(1.05);
+      background: #a86cc0;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      #contacts {
+        padding: 15px;
+      }
+
+      #contactForm input, #contactForm textarea {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('contactForm');
+      contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Thank you for reaching out! I will get back to you soon.');
+        contactForm.reset();
+      });
+
+      // Add fade-in animation to the form
+      const formElements = contactForm.querySelectorAll('input, textarea, button');
+      formElements.forEach((element, index) => {
+        element.style.opacity = 0;
+        element.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          element.style.opacity = 1;
+          element.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="text-center p-3" id="footer">
+    <div class="container12">
+      <p class="text-light mb-0">
+        <a href="https://instagram.com" class="footer-link">Instagram</a> ;
+        <a href="https://linkedin.com" class="footer-link">LinkedIn</a> ;
+        <a href="https://github.com" class="footer-link">GitHub</a> ;
+        <a href="mailto:vaibhav9039203581@gmail.com" class="footer-link">vaibhav9039203581@gmail.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <style>
+    #footer {
+      background: linear-gradient(135deg, #1e1e2f, #2a2a3d);
+      color: #fff;
+      border-top: 2px solid #c586c0;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+      animation: fadeInUp 1s ease;
+    }
+
+    .footer-link {
+      color: #c586c0;
+      text-decoration: none;
+      margin: 0 5px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .footer-link:hover {
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      #footer {
+        padding: 15px;
+      }
+
+      .footer-link {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const footerLinks = document.querySelectorAll('.footer-link');
+      footerLinks.forEach((link, index) => {
+        link.style.opacity = 0;
+        link.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          link.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          link.style.opacity = 1;
+          link.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+    });
+  </script>
+</body>
+</html>

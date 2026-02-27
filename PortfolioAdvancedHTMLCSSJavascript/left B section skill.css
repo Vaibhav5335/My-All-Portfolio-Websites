@@ -1,0 +1,46 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 20px;
+}
+#skills {
+    margin: 0 auto;
+    max-width: 800px;
+    margin-left: 4px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.t-6 {
+    flex: 1 1 calc(50% - 15px);
+    box-sizing: border-box;
+}
+
+.t-6 p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.progress {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 12px;
+    position: relative;
+    width: 125px; /* Ensure all bars have the same width */
+}
+
+.progress-bar {
+    background-color: #c586c0;
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+    position: absolute; /* Ensure the colored bar overlays the white bar */
+    top: 0;
+    left: 0;
+}

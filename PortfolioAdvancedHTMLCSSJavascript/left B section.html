@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="left B section skill.css">
+</head>
+
+<body>
+    <div class="social-links">
+        <a href="mailto:vaibhav9039203581@gmail.com" aria-label="Email" target="main.html">
+          <span class="icon email"></span>
+        </a>
+        <a href="https://github.com/Vaibhav5335" aria-label="GitHub" target="main.html">
+          <span class="icon github"></span>
+        </a>
+        <a href="https://www.linkedin.com/in/vaibhav-sharma-2a4333308/" aria-label="LinkedIn" target="main.html">
+          <span class="icon linkedin"></span>
+        </a>
+      </div>
+
+    <p style="text-justify: auto;text-align: center;">I’m a Computer Science student with expertise in Artificial
+        Intelligence and Data Science.</p>
+
+        <a href="resume.pdf" class="btn btn-outline-light mt-3" style="margin-left: 5px;" download>Download Resume</a>
+
+        <main>
+            <section id="skills" class="toad-fullscreen">
+            <article class="skills">
+                <div class="t-6">
+                <p>HTML :</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 0;"></div>
+                </div>
+                </div>
+            
+                <div class="t-6">
+                <p>CSS :</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 0;"></div>
+                </div>
+                </div>
+            
+                <div class="t-6">
+                <p>JS/jQuery :</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 0;"></div>
+                </div>
+                </div>
+            
+                <div class="t-6">
+                <p>Vue.js :</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 0;"></div>
+                </div>
+                </div>
+            
+                <div class="t-6">
+                <p>PHP/MySQL :</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 0;"></div>
+                </div>
+                </div>
+            
+                <div class="t-6">
+                <p>Laravel :</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 0;"></div>
+                </div>
+                </div>
+            
+                <div class="t-6">
+                <p>Photoshop :</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 0;"></div>
+                </div>
+                </div>
+            
+            </article>
+            </section>
+        </main>
+
+        <style>
+            #skills {
+            padding: 20px;
+            background: transparent;
+            color: white;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            .skills .t-6 {
+            margin-bottom: 20px;
+            }
+
+            .skills p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            }
+
+            .progress {
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 20px;
+            }
+
+            .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            transition: width 1s ease-in-out;
+            }
+        </style>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            const progressBars = document.querySelectorAll(".progress-bar");
+            const skillLevels = [90, 85, 75, 70, 80, 65, 60];
+
+            progressBars.forEach((bar, index) => {
+                setTimeout(() => {
+                bar.style.width = skillLevels[index] + "%";
+                }, index * 300); // Delay animation for each bar
+            });
+            });
+        </script>
+</body>
+
+</html>
