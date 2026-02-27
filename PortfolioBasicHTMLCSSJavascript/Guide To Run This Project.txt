@@ -1,0 +1,2 @@
+1. Open This Folder " BasicHTMLCSSJavascriptPortfolio " In VScode.
+2. Now Open the "main-page.html" file and using Liveserver make it live Using "Go live" button.
